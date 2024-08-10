@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -58,6 +59,7 @@ public class ToDoListController {
 
     @FXML
     public void initialize() {
+
         statusComboBox.setItems(FXCollections.observableArrayList("Not Started", "In Progress", "Completed"));
 
         taskList = FXCollections.observableArrayList();
@@ -68,6 +70,34 @@ public class ToDoListController {
         statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
         dueDateColumn.setCellValueFactory(new PropertyValueFactory<>("dueDate"));
         notesColumn.setCellValueFactory(new PropertyValueFactory<>("notes"));
+
+        statusColumn.setCellFactory(column -> new TableCell<Task, String>() {
+            @Override
+            protected void updateItem(String status, boolean empty) {
+                super.updateItem(status, empty);
+
+                if (empty || status == null) {
+                    setText(null);
+                    setStyle(""); // Clear style
+                } else {
+                    setText(status);
+                    switch (status) {
+                        case "In Progress":
+                            setStyle("-fx-background-color: yellow; -fx-padding: 5;");
+                            break;
+                        case "Not Started":
+                            setStyle("-fx-background-color: gray; -fx-padding: 5;");
+                            break;
+                        case "Completed":
+                            setStyle("-fx-background-color: green; -fx-padding: 5;");
+                            break;
+                        default:
+                            setStyle("-fx-background-color: white; -fx-padding: 5;");
+                            break;
+                    }
+                }
+            }
+        });
     }
 
     @FXML
@@ -94,6 +124,19 @@ public class ToDoListController {
     }
 
     @FXML
+    protected void handleChangeStatus(ActionEvent event) {
+        Task selectedTask = taskTableView.getSelectionModel().getSelectedItem();
+        if (selectedTask != null) {
+            String currentStatus = selectedTask.getStatus();
+            String newStatus = statusComboBox.getValue();
+            if (newStatus != null && !newStatus.equals(currentStatus)) {
+                selectedTask.status = newStatus;
+                taskTableView.refresh();
+            }
+        }
+    }
+
+    @FXML
     void returnWindow(ActionEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main-screen.fxml"));
@@ -104,18 +147,6 @@ public class ToDoListController {
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
-        }
-    }
-
-    @FXML
-    protected void handleChangeStatus() {
-        Task selectedTask = taskTableView.getSelectionModel().getSelectedItem();
-        if (selectedTask != null) {
-            String newStatus = statusComboBox.getValue();
-            if (newStatus != null && !newStatus.isEmpty()) {
-                selectedTask.setStatus(newStatus);
-                taskTableView.refresh();
-            }
         }
     }
 
