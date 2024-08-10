@@ -4,6 +4,8 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,8 +13,8 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lbycpeiproject.ToDoListController">
-    <GridPane hgap="10" vgap="10">
+<AnchorPane prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lbycpeiproject.ToDoListController">
+    <GridPane hgap="10" vgap="10" layoutX="20.0" layoutY="10.0">
         <Label text="Course Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
         <TextField fx:id="courseNameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
@@ -26,21 +28,39 @@
         <DatePicker fx:id="dueDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
         <Label text="Notes:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-        <TextArea fx:id="notesArea" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextArea fx:id="notesArea" GridPane.columnIndex="1" GridPane.rowIndex="4" prefHeight="100.0" prefWidth="200.0" />
 
         <Button onAction="#handleOk" text="OK" GridPane.columnIndex="0" GridPane.rowIndex="5" />
         <Button onAction="#handleCancel" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-      <columnConstraints>
-         <ColumnConstraints />
-         <ColumnConstraints />
-      </columnConstraints>
-      <rowConstraints>
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-      </rowConstraints>
+
+        <!-- New Change Status Button -->
+        <Button onAction="#handleChangeStatus" text="Change Status" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+
+        <columnConstraints>
+            <ColumnConstraints minWidth="200" />
+            <ColumnConstraints minWidth="200" />
+            <ColumnConstraints minWidth="200" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="30" />
+            <RowConstraints minHeight="30" />
+            <RowConstraints minHeight="30" />
+            <RowConstraints minHeight="30" />
+            <RowConstraints minHeight="100" />
+            <RowConstraints minHeight="40" />
+        </rowConstraints>
     </GridPane>
+
+    <TableView fx:id="taskTableView" layoutX="20.0" layoutY="310.0" prefHeight="240.0" prefWidth="984.0">
+        <columns>
+            <TableColumn fx:id="courseNameColumn" text="Course Name" prefWidth="200.0" />
+            <TableColumn fx:id="taskNameColumn" text="Task Name" prefWidth="200.0" />
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="200.0" />
+            <TableColumn fx:id="dueDateColumn" text="Due Date" prefWidth="200.0" />
+            <TableColumn fx:id="notesColumn" text="Notes" prefWidth="184.0" />
+        </columns>
+    </TableView>
+    
+    <Button onAction="#returnWindow" text="Return to Main Menu" layoutX="20.0" layoutY="560.0" prefWidth="200.0" />
 </AnchorPane>
+
