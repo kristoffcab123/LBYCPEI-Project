@@ -34,21 +34,17 @@ public class GWACalculatorController {
     @FXML
     protected void calculateGPA() {
         try {
-            // Initialize total units and weighted sum of grades
             int totalUnitsValue = 0;
             double weightedSum = 0.0;
             boolean isDeansLister = true;
 
-            // Arrays of TextFields
             TextField[] unitsFields = {units1, units2, units3, units4, units5, units6, units7};
             TextField[] gradeFields = {grade1, grade2, grade3, grade4, grade5, grade6, grade7};
 
-            // Loop through all courses
             for (int i = 0; i < unitsFields.length; i++) {
                 String unitsText = unitsFields[i].getText();
                 String gradeText = gradeFields[i].getText();
 
-                // Only process fields that are not empty
                 if (!unitsText.isEmpty() && !gradeText.isEmpty()) {
                     int unitsValue = Integer.parseInt(unitsText);
                     double gradeValue = Double.parseDouble(gradeText);
@@ -56,33 +52,27 @@ public class GWACalculatorController {
                     totalUnitsValue += unitsValue;
                     weightedSum += unitsValue * gradeValue;
 
-                    // Check if the student can be a Dean's Lister
                     if (gradeValue < 2.0) {
                         isDeansLister = false;
                     }
                 }
             }
 
-            // If no courses were entered, display an error
             if (totalUnitsValue == 0) {
                 gpa.setText("No courses entered!");
                 deansLister.setText("N/A");
                 return;
             }
 
-            // Calculate the GPA
             double finalGPA = weightedSum / totalUnitsValue;
 
-            // Dean's Lister qualification (3.0 or higher GPA)
-            isDeansLister = isDeansLister && finalGPA >= 3.0;
+            isDeansLister = isDeansLister && finalGPA >= 3.0 && totalUnitsValue >= 12;
 
-            // Display the results
             totalUnits.setText(String.valueOf(totalUnitsValue));
             gpa.setText(String.format("%.3f", finalGPA));
             deansLister.setText(isDeansLister ? "YES" : "NO");
 
         } catch (NumberFormatException e) {
-            // Handle invalid input
             gpa.setText("Invalid input!");
             deansLister.setText("N/A");
         }
