@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lbycpeiproject.ToDoListController">
+<AnchorPane prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: #368C28;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lbycpeiproject.ToDoListController">
     <GridPane hgap="10" vgap="10" layoutX="20.0" layoutY="10.0">
         <Label text="Course Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
         <TextField fx:id="courseNameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
