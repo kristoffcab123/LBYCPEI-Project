@@ -195,7 +195,7 @@
          </children>
       </HBox>
       <TextField fx:id="courseName" layoutX="792.0" layoutY="23.0" prefHeight="26.0" prefWidth="182.0" />
-      <TextField fx:id="courseTime" layoutX="792.0" layoutY="55.0" prefHeight="26.0" prefWidth="182.0" />
+      <TextField fx:id="courseTime" layoutX="792.0" layoutY="55.0" prefHeight="26.0" prefWidth="182.0" promptText="HH:MM-HH:MM (7:30-21:30)" />
       <Label layoutX="656.0" layoutY="22.0" text="Course Name:" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="20.0" />
@@ -216,7 +216,7 @@
             <Font name="Cambria Math" size="15.0" />
          </font>
       </Button>
-      <TextField fx:id="courseDay" layoutX="792.0" layoutY="88.0" prefHeight="26.0" prefWidth="182.0" />
+      <TextField fx:id="courseDay" layoutX="792.0" layoutY="88.0" prefHeight="26.0" prefWidth="182.0" promptText="M, T, W, TH, F, S" />
       <Label layoutX="732.0" layoutY="87.0" text="Days:" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="20.0" />
@@ -227,77 +227,77 @@
             <Font name="Cambria Math" size="15.0" />
          </font>
       </Button>
-      <Label layoutX="58.0" layoutY="211.0" text="7:30AM" textAlignment="CENTER">
+      <Label layoutX="58.0" layoutY="211.0" text="7:30AM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="235.0" text="8:30AM" textAlignment="CENTER">
+      <Label layoutX="58.0" layoutY="235.0" text="8:30AM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="259.0" text="9:30AM" textAlignment="CENTER">
+      <Label layoutX="58.0" layoutY="259.0" text="9:30AM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="53.0" layoutY="283.0" text="10:30AM" textAlignment="CENTER">
+      <Label layoutX="53.0" layoutY="283.0" text="10:30AM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="53.0" layoutY="307.0" text="11:30AM" textAlignment="CENTER">
+      <Label layoutX="53.0" layoutY="307.0" text="11:30AM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="53.0" layoutY="331.0" text="12:30PM" textAlignment="CENTER">
+      <Label layoutX="53.0" layoutY="331.0" text="12:30PM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="355.0" text="1:30PM" textAlignment="CENTER">
+      <Label layoutX="58.0" layoutY="355.0" text="1:30PM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="379.0" text="2:30PM" textAlignment="CENTER">
+      <Label layoutX="58.0" layoutY="379.0" text="2:30PM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="403.0" text="3:30PM" textAlignment="CENTER">
+      <Label layoutX="58.0" layoutY="403.0" text="3:30PM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="427.0" text="4:30PM" textAlignment="CENTER">
+      <Label layoutX="58.0" layoutY="427.0" text="4:30PM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="451.0" text="5:30PM" textAlignment="CENTER">
+      <Label layoutX="58.0" layoutY="451.0" text="5:30PM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="475.0" text="6:30PM" textAlignment="CENTER">
+      <Label layoutX="58.0" layoutY="475.0" text="6:30PM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="499.0" text="7:30PM" textAlignment="CENTER">
+      <Label layoutX="58.0" layoutY="499.0" text="7:30PM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="523.0" text="8:30PM" textAlignment="CENTER">
+      <Label layoutX="58.0" layoutY="523.0" text="8:30PM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="547.0" text="9:30PM" textAlignment="CENTER">
+      <Label layoutX="58.0" layoutY="547.0" text="9:30PM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
