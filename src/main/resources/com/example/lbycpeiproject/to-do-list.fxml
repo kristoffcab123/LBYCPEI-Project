@@ -15,19 +15,19 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: #368C28;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lbycpeiproject.ToDoListController">
     <GridPane hgap="10" vgap="10" layoutX="20.0" layoutY="10.0">
-        <Label text="Course Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" style="-fx-text-fill: white; -fx-font-size: 15px;" />
+        <Label text="Course Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" style="-fx-text-fill: white; -fx-font-size: 15px; -fx-font-family: 'Comic Sans MS';" />
         <TextField fx:id="courseNameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
-        <Label text="Task Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" style="-fx-text-fill: white; -fx-font-size: 15px;"  />
+        <Label text="Task Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" style="-fx-text-fill: white; -fx-font-size: 15px; -fx-font-family: 'Comic Sans MS';" />
         <TextField fx:id="taskNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-        <Label text="Status:" GridPane.columnIndex="0" GridPane.rowIndex="2" style="-fx-text-fill: white; -fx-font-size: 15px;"  />
+        <Label text="Status:" GridPane.columnIndex="0" GridPane.rowIndex="2" style="-fx-text-fill: white; -fx-font-size: 15px; -fx-font-family: 'Comic Sans MS';" />
         <ComboBox fx:id="statusComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-        <Label text="Due Date:" GridPane.columnIndex="0" GridPane.rowIndex="3" style="-fx-text-fill: white; -fx-font-size: 15px;"  />
+        <Label text="Due Date:" GridPane.columnIndex="0" GridPane.rowIndex="3" style="-fx-text-fill: white; -fx-font-size: 15px; -fx-font-family: 'Comic Sans MS';" />
         <DatePicker fx:id="dueDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
-        <Label text="Notes:" GridPane.columnIndex="0" GridPane.rowIndex="4" style="-fx-text-fill: white; -fx-font-size: 15px;"  />
+        <Label text="Notes:" GridPane.columnIndex="0" GridPane.rowIndex="4" style="-fx-text-fill: white; -fx-font-size: 15px; -fx-font-family: 'Comic Sans MS';" />
         <TextArea fx:id="notesArea" GridPane.columnIndex="1" GridPane.rowIndex="4" prefHeight="100.0" prefWidth="200.0" />
 
         <columnConstraints>
@@ -47,15 +47,15 @@
     <Button onAction="#handleOk" text="OK" layoutX="670.0" layoutY="130.0" prefWidth="200.0" style="-fx-background-color: #87B758;" textAlignment="CENTER" textFill="WHITE" />
     <Button onAction="#handleCancel" text="Cancel" layoutX="670.0" layoutY="170.0" prefWidth="200.0" style="-fx-background-color: #87B758;" textAlignment="CENTER" textFill="WHITE" />
     <Button onAction="#handleChangeStatus" text="Change Status" layoutX="670.0" layoutY="210.0" prefWidth="200.0" style="-fx-background-color: #87B758;" textAlignment="CENTER" textFill="WHITE" />
-    
-    <Label text="To-Do List" layoutX="580.0" layoutY="20.0" style="-fx-text-fill: white; -fx-font-size: 80px;" />
+
+    <Label text="To-Do List" layoutX="580.0" layoutY="20.0" style="-fx-text-fill: white; -fx-font-size: 80px; -fx-font-family: 'Comic Sans MS';" />
 
     <TableView fx:id="taskTableView" layoutX="20.0" layoutY="310.0" prefHeight="240.0" prefWidth="984.0">
         <columns>
             <TableColumn fx:id="courseNameColumn" text="Course Name" prefWidth="200.0" />
-            <TableColumn fx:id="taskNameColumn" text="Task Name" prefWidth="200.0"  />
-            <TableColumn fx:id="statusColumn" text="Status" prefWidth="200.0"  />
-            <TableColumn fx:id="dueDateColumn" text="Due Date" prefWidth="200.0"  />
+            <TableColumn fx:id="taskNameColumn" text="Task Name" prefWidth="200.0" />
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="200.0" />
+            <TableColumn fx:id="dueDateColumn" text="Due Date" prefWidth="200.0" />
             <TableColumn fx:id="notesColumn" text="Notes" prefWidth="184.0" />
         </columns>
     </TableView>
